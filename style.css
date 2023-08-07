@@ -1,0 +1,111 @@
+html{
+    box-sizing: border-box;
+    font-family: 'Open Sans',sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    /* font-family: sans-serif; Font Family Shoudl be in HTML */
+    background-color:#60a9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.panel{
+    /* display: flex; Display property should be in parent container */
+    background-color: white;
+    border-radius: 1.5625rem;
+    padding: 0.9375rem 1.5625rem;
+    width: 100%;
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.pricing-plan{
+
+    &:not(:last-child){
+       border-bottom: 1px solid #e1f1ff;
+    }
+
+    .pricing-img{
+        margin-bottom: 1.5625rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .pricing-header{
+        /* text-align: center; */
+        color: #888;
+        font-weight: 600;
+        letter-spacing: 0.0625rem;
+        margin-bottom: 2rem;
+    }
+
+    .pricing-features{
+        /* text-align: center; */
+        margin: 3.125rem 0rem 1.5625rem;
+        color: #016ff9;
+    }
+
+    .pricing-features-item{
+        list-style: none;
+        letter-spacing: 0.0625rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        /* line-height: 1.5; */
+        padding: 0.9375rem 0rem;
+        border-top: 1px solid #e1f1ff;
+
+        &:not(:first-child){
+            border-bottom: 1px solid #e1f1ff;
+        }
+    }
+
+    .pricing-price{
+        display: block;
+        color: #016ff9;
+        font-size: 2rem;
+        letter-spacing: 0.0625rem;
+        font-weight: 700;
+    }
+
+    .pricing-button{
+        border: 1px solid #9dd1ff;
+        border-radius: 0.625rem;
+        padding: 0.9375rem 2.0625rem;
+        text-decoration: none;
+        font-size: 1.375rem;
+        color:#016ff9;
+    /* margin: 16px; */
+        display: inline-block;
+        margin: 1.5625rem 0;
+        transition: all 200ms ease-in-out;
+
+        &:hover{
+            color: white;
+            background-color: #016ff9;
+        }
+    }
+}
+
+/* Media Query to make it responsive */
+
+@media (min-width:900px) {
+    
+    .panel{
+        flex-direction: row;
+    }
+
+    .pricing-plan{
+        border-bottom: none;
+        padding: 1.5625rem 3.125rem;
+        &:not(:last-child){
+            border-right: 1px solid #e1f1ff;
+        }
+    }
+}
